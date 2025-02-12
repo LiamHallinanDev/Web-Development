@@ -1,0 +1,31 @@
+{% comment %} Checks to see if the current navigation loop is for pokemon singles {% endcomment %}
+{% if link.handle == 'singles' %}
+    {% assign singles = true %}
+{% endif %}
+{% if childlink.title == 'Pokémon' %}
+    {% assign pkm-singles = true %}
+{% endif %}
+{% if singles == true and pkm-singles == true %}
+    {% assign pokemon-singles = collections['Pokémon-Singles'] %}
+    {% for tag in pokemon-singles.tags %}
+        {% comment %} Filtering out edge case tags to display correct list {% endcomment %}
+        {% if tag contains ' ' or tag contains '[' or tag contains 'Rare' or tag contains 'Energy' 
+            or tag contains 'Metal E' or tag contains "Reverse Holofoil" %}
+            {% continue %}
+        {% else %}
+            <li>
+            {% comment %} Adds the tags in as menu items using.
+            The style items need to be changed depending of the navigation type 
+            {% endcomment %}
+            <a
+                id="HeaderMenu-singles-pokemon-all"
+                href="/collections/pokemon-singles/{{ tag | handle }}"
+                class="header__menu-item list-menu__item link link--text focus-inset caption-large"
+                {% if grandchildlink.current %} aria-current="page" {% endif %}
+            >
+                <span style="texty-transform: capitalize"> {{ tag | replace: '-', ' ' }} </span>
+            </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endif %}
