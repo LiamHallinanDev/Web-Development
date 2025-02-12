@@ -1,5 +1,5 @@
 # Read Me
-The following is a breakdown of the way in which I helped a local TCG Business called Luna Cards improve the UI/UX of their website. The final algorithm that produces the required functionality can be found in [code.liquid](./code.liquid).
+The is a breakdown of the way in which I helped a local TCG Business called Luna Cards improve the UI/UX of their website. The final algorithm that produces the required functionality can be found in [code.liquid](./code.liquid).
 
 ## Business Requirements 
 To help Luna Cards customers navigate through the large Pokemon-Singles collection listed on the shopify a list of the set of Pokemon cards in-stock was required in the top navigation bar. So that customers could see in the navigation menu a list of the Pokemon card sets currently in stock. Any solution should be able to be easily applied to other TCG Collections in the future.
@@ -40,6 +40,6 @@ This code is places inside the liquid theme template in the header-dropdown-menu
 ##### Caveats
 - The code must be modified for each individual TCG Type and tweaked to operate properly for each type as well as top navigation type.
 
-![Example of Dynamic Dropdown NaV List 2](./menu-example3.png)
+![Example of Dynamic Dropdown NaV List 2](./menu-example2.png)
 
 ![Example of Dynamic Drawer Nav List 2](./menu-example4.png)
