@@ -1,6 +1,8 @@
 # Read Me
 This folder contains the html scaffolds used to create the basic page layouts for some of the pages on lunacards.com.au.
 
+Each page is embedded inside the shopify page as HTML and the custom-css.css file is placed inside the shopify theme and added to the header of the theme.
+
 Please read below for more context.
 
 ## Business Requirements
